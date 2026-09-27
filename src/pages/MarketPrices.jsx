@@ -66,7 +66,7 @@ export default function MarketPrices() {
             style={{ 
               animationDelay: `${300 + (idx * 100)}ms`,
               flex: '1', 
-              minWidth: '280px', 
+              minWidth: '240px', 
               background: 'var(--color-surface)', 
               padding: '28px',
               border: '1px solid var(--color-border)',

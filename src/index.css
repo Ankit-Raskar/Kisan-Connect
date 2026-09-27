@@ -39,6 +39,17 @@ body.dusk-mode {
 
 html { font-size: calc(16px * var(--font-scale)); scroll-behavior: smooth; }
 
+.mobile-scroll-row {
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  flex-wrap: nowrap;
+}
+.mobile-scroll-row::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   font-family: var(--font-body);
   background-color: var(--color-bg);

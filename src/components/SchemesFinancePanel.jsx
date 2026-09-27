@@ -78,7 +78,7 @@ export default function SchemesFinancePanel() {
         </div>
         
         {/* Tab Buttons */}
-        <div className="flex gap-2" style={{ background: 'var(--color-surface)', padding: '6px', borderRadius: '999px', border: '1px solid var(--color-border)' }}>
+        <div className="mobile-scroll-row gap-2" style={{ background: 'var(--color-surface)', padding: '6px', borderRadius: '999px', border: '1px solid var(--color-border)' }}>
           <button 
             onClick={() => setActiveTab('schemes')}
             className={`nav-link ${activeTab === 'schemes' ? 'active' : ''}`}

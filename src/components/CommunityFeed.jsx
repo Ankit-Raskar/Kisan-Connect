@@ -103,8 +103,8 @@ export default function CommunityFeed() {
           <div className="underline-accent" style={{ marginTop: '8px' }}></div>
         </div>
 
-        <div className="flex items-center gap-3">
-          <div className="flex gap-2" style={{ background: 'var(--color-surface)', padding: '6px', borderRadius: '999px', border: '1px solid var(--color-border)' }}>
+        <div className="flex items-center gap-3" style={{ flexWrap: 'wrap' }}>
+          <div className="mobile-scroll-row gap-2" style={{ background: 'var(--color-surface)', padding: '6px', borderRadius: '999px', border: '1px solid var(--color-border)' }}>
             <button 
               onClick={() => setActiveTab('qa')} 
               className={`nav-link ${activeTab === 'qa' ? 'active' : ''}`}
