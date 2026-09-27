@@ -12,7 +12,7 @@ export default function SoilHealth() {
     <div className="container flex-col gap-8 animate-fade-up">
       <div>
         <span className="eyebrow">Soil Health Reader & NPK Fixes</span>
-        <h2 style={{ fontSize: '2.8rem', color: 'var(--color-forest)' }}>Interactive Soil Reader</h2>
+        <h2 style={{ fontSize: 'clamp(1.8rem, 5vw, 2.8rem)', color: 'var(--color-forest)' }}>Interactive Soil Reader</h2>
         <div className="underline-accent" style={{ marginTop: '8px' }}></div>
         <p style={{ color: 'var(--color-sage)', fontSize: '1.05rem' }}>
           Input your Soil Health Card laboratory values below to get instant plain-language soil fixes and clay-vessel moisture telemetry.
@@ -22,7 +22,7 @@ export default function SoilHealth() {
       <div className="flex" style={{ flexWrap: 'wrap', gap: '32px' }}>
         
         {/* Input Controls */}
-        <div className="blob-card-soft" style={{ flex: 1, minWidth: '320px', background: 'var(--color-surface)', padding: '32px' }}>
+        <div className="blob-card-soft" style={{ flex: 1, minWidth: 'min(320px, 100%)', background: 'var(--color-surface)', padding: '32px' }}>
           <h3 style={{ fontSize: '1.5rem', marginBottom: '20px', color: 'var(--color-forest)' }}>Laboratory Test Values</h3>
           
           <div className="flex-col gap-4">
@@ -71,7 +71,7 @@ export default function SoilHealth() {
         </div>
 
         {/* Diagnosis & Fixes Output */}
-        <div className="blob-card-soft" style={{ flex: 1.2, minWidth: '340px', background: 'var(--color-bg)', padding: '36px', border: '1.5px solid var(--color-forest)' }}>
+        <div className="blob-card-soft" style={{ flex: 1.2, minWidth: 'min(340px, 100%)', background: 'var(--color-bg)', padding: '36px', border: '1.5px solid var(--color-forest)' }}>
           <span className="eyebrow" style={{ color: 'var(--color-forest)' }}>Plain-Language Fixes</span>
           <h3 style={{ fontSize: '1.8rem', color: 'var(--color-forest)', marginBottom: '16px' }}>Soil Health Diagnosis</h3>
 

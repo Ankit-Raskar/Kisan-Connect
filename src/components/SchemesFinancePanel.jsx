@@ -134,7 +134,7 @@ export default function SchemesFinancePanel() {
                 value={searchSchemeQuery}
                 onChange={(e) => setSearchSchemeQuery(e.target.value)}
                 className="form-input"
-                style={{ maxWidth: '300px' }}
+                style={{ maxWidth: '100%' }}
               />
             </div>
 
@@ -146,7 +146,7 @@ export default function SchemesFinancePanel() {
                   style={{ 
                     animationDelay: `${300 + (idx * 100)}ms`,
                     flex: '1', 
-                    minWidth: '280px', 
+                    minWidth: 'min(280px, 100%)', 
                     background: 'var(--color-bg)', 
                     borderRadius: '24px', 
                     padding: '24px',
@@ -188,7 +188,7 @@ export default function SchemesFinancePanel() {
             <div className="flex animate-fade-up delay-300" style={{ flexWrap: 'wrap', gap: '32px' }}>
               
               {/* Inputs */}
-              <div style={{ flex: 1, minWidth: '280px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+              <div style={{ flex: 1, minWidth: 'min(280px, 100%)', display: 'flex', flexDirection: 'column', gap: '16px' }}>
                 <div>
                   <label style={{ fontSize: '0.9rem', fontWeight: 600, color: 'var(--color-forest)' }}>Land Area (Acres):</label>
                   <input 
@@ -216,7 +216,7 @@ export default function SchemesFinancePanel() {
               </div>
 
               {/* Output Ledger Receipt */}
-              <div style={{ flex: 1.2, minWidth: '300px', background: 'var(--color-bg)', padding: '28px', borderRadius: '24px', border: '1px dashed var(--color-forest)' }}>
+              <div style={{ flex: 1.2, minWidth: 'min(300px, 100%)', background: 'var(--color-bg)', padding: '28px', borderRadius: '24px', border: '1px dashed var(--color-forest)' }}>
                 <p className="eyebrow" style={{ color: 'var(--color-forest)', marginBottom: '16px' }}>Official Estimate Breakdown</p>
                 
                 <div className="flex justify-between" style={{ padding: '8px 0', borderBottom: '1px solid var(--color-border)' }}>
@@ -256,7 +256,7 @@ export default function SchemesFinancePanel() {
             <div className="flex animate-fade-up delay-300" style={{ flexWrap: 'wrap', gap: '32px' }}>
               
               {/* Cost Inputs */}
-              <div style={{ flex: 1, minWidth: '280px', display: 'flex', flexDirection: 'column', gap: '14px' }}>
+              <div style={{ flex: 1, minWidth: 'min(280px, 100%)', display: 'flex', flexDirection: 'column', gap: '14px' }}>
                 <p className="eyebrow" style={{ color: 'var(--color-soil)' }}>Per Acre Expense Breakdown (₹)</p>
                 
                 <div className="flex items-center gap-3">
@@ -281,7 +281,7 @@ export default function SchemesFinancePanel() {
               </div>
 
               {/* Profit Receipt */}
-              <div style={{ flex: 1.2, minWidth: '300px', background: 'var(--color-forest)', color: '#F4EFE4', padding: '28px', borderRadius: '24px' }}>
+              <div style={{ flex: 1.2, minWidth: 'min(300px, 100%)', background: 'var(--color-forest)', color: '#F4EFE4', padding: '28px', borderRadius: '24px' }}>
                 <p className="eyebrow" style={{ color: 'var(--color-gold)', marginBottom: '16px' }}>Seasonal Financial Summary ({landAcres} Acres)</p>
                 
                 <div className="flex justify-between" style={{ padding: '8px 0', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>

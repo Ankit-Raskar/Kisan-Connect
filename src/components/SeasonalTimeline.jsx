@@ -207,17 +207,17 @@ export default function SeasonalTimeline() {
             </div>
 
             <div className="flex" style={{ flexWrap: 'wrap', gap: '20px' }}>
-              <div style={{ flex: 1, minWidth: '240px', background: 'var(--color-surface)', padding: '18px', borderRadius: '16px' }}>
+              <div style={{ flex: 1, minWidth: 'min(240px, 100%)', background: 'var(--color-surface)', padding: '18px', borderRadius: '16px' }}>
                 <p style={{ fontWeight: 600, color: 'var(--color-forest)', marginBottom: '6px', fontSize: '0.9rem' }}>🌾 Essential Field Action</p>
                 <p style={{ fontSize: '0.92rem', color: 'var(--color-text-muted)' }}>{selectedStage.action}</p>
               </div>
 
-              <div style={{ flex: 1, minWidth: '240px', background: 'var(--color-surface)', padding: '18px', borderRadius: '16px' }}>
+              <div style={{ flex: 1, minWidth: 'min(240px, 100%)', background: 'var(--color-surface)', padding: '18px', borderRadius: '16px' }}>
                 <p style={{ fontWeight: 600, color: 'var(--color-soil)', marginBottom: '6px', fontSize: '0.9rem' }}>💧 Irrigation Plan</p>
                 <p style={{ fontSize: '0.92rem', color: 'var(--color-text-muted)' }}>{selectedStage.irrigation}</p>
               </div>
 
-              <div style={{ flex: 1, minWidth: '240px', background: 'var(--color-surface)', padding: '18px', borderRadius: '16px' }}>
+              <div style={{ flex: 1, minWidth: 'min(240px, 100%)', background: 'var(--color-surface)', padding: '18px', borderRadius: '16px' }}>
                 <p style={{ fontWeight: 600, color: 'var(--color-sage)', marginBottom: '6px', fontSize: '0.9rem' }}>🧪 Fertilizer & Dosage</p>
                 <p style={{ fontSize: '0.92rem', color: 'var(--color-text-muted)' }}>{selectedStage.fertilizer}</p>
               </div>

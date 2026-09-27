@@ -90,7 +90,7 @@ export default function PestDiagnosticModal({ isOpen, onClose }) {
         </p>
 
         {/* Crop Selector */}
-        <div className="flex gap-3" style={{ marginBottom: '20px' }}>
+        <div className="flex gap-3" style={{ flexWrap: 'wrap', marginBottom: '20px' }}>
           <button 
             onClick={() => { setSelectedCrop('wheat'); setSelectedSymptom('yellow_stripes'); }}
             className={`btn-outline ${selectedCrop === 'wheat' ? 'active' : ''}`}

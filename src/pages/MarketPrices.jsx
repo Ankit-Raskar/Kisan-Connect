@@ -22,7 +22,7 @@ export default function MarketPrices() {
       <div className="flex items-center justify-between animate-fade-up delay-100" style={{ flexWrap: 'wrap', gap: '16px' }}>
         <div>
           <span className="eyebrow">APMC Mandi Intelligence</span>
-          <h2 style={{ fontSize: '2.8rem', color: 'var(--color-forest)' }}>Nearby Mandi Rates & Guidance</h2>
+          <h2 style={{ fontSize: 'clamp(1.8rem, 5vw, 2.8rem)', color: 'var(--color-forest)' }}>Nearby Mandi Rates & Guidance</h2>
           <div className="underline-accent" style={{ marginTop: '8px' }}></div>
           <p style={{ color: 'var(--color-sage)', fontSize: '1.05rem' }}>
             Daily commodity market updates with sell/hold guidance (Not guaranteed financial advice).
@@ -35,7 +35,7 @@ export default function MarketPrices() {
           value={searchMandi}
           onChange={(e) => setSearchMandi(e.target.value)}
           className="form-input"
-          style={{ maxWidth: '320px' }}
+          style={{ maxWidth: 'min(320px, 100%)' }}
         />
       </div>
 
@@ -66,7 +66,7 @@ export default function MarketPrices() {
             style={{ 
               animationDelay: `${300 + (idx * 100)}ms`,
               flex: '1', 
-              minWidth: '240px', 
+              minWidth: 'min(240px, 100%)', 
               background: 'var(--color-surface)', 
               padding: '28px',
               border: '1px solid var(--color-border)',

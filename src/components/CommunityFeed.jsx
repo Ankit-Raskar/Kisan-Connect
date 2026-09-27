@@ -222,7 +222,7 @@ export default function CommunityFeed() {
               style={{ 
                 animationDelay: `${200 + (idx * 150)}ms`,
                 flex: '1', 
-                minWidth: '240px', 
+                minWidth: 'min(240px, 100%)', 
                 background: 'var(--color-surface)', 
                 padding: '28px', 
                 border: '1px solid var(--color-border)' 

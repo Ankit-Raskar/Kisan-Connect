@@ -17,7 +17,7 @@ export default function SustainabilityScore() {
         <div className="flex" style={{ flexWrap: 'wrap', gap: '36px', alignItems: 'center' }}>
           
           {/* Score Badge */}
-          <div style={{ textAlign: 'center', minWidth: '200px' }}>
+          <div style={{ textAlign: 'center', minWidth: 'min(200px, 100%)' }}>
             <span className="eyebrow" style={{ color: 'var(--color-gold)' }}>Eco-Land Guardian Score</span>
             <div className="text-large-num pulse-anim" style={{ fontSize: '4.5rem', color: 'var(--color-gold)', fontWeight: 700, lineHeight: 1 }}>
               86<span style={{ fontSize: '1.5rem', color: 'rgba(255,255,255,0.6)' }}>/100</span>
@@ -28,7 +28,7 @@ export default function SustainabilityScore() {
           </div>
 
           {/* Breakdown items */}
-          <div style={{ flex: 1, minWidth: '300px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+          <div style={{ flex: 1, minWidth: 'min(300px, 100%)', display: 'flex', flexDirection: 'column', gap: '16px' }}>
             <h3 style={{ fontSize: '1.6rem', color: '#F4EFE4' }}>Sustainable Land & Water Index</h3>
             
             <div className="flex items-center justify-between animate-fade-up delay-300" style={{ padding: '12px 16px', background: 'rgba(255,255,255,0.08)', borderRadius: '16px' }}>

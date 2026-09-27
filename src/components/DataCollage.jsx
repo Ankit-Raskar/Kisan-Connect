@@ -36,7 +36,7 @@ export default function DataCollage({ onOpenSoilDetails }) {
         <Link 
           to="/weather" 
           className="blob-frame blob-collage-left animate-fade-up delay-200" 
-          style={{ flex: '1', minWidth: '340px', background: 'var(--color-surface)', padding: '36px', display: 'flex', flexDirection: 'column', minHeight: '380px', border: '1px solid var(--color-border)' }}
+          style={{ flex: '1', minWidth: 'min(340px, 100%)', background: 'var(--color-surface)', padding: '36px', display: 'flex', flexDirection: 'column', minHeight: '380px', border: '1px solid var(--color-border)' }}
         >
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2" style={{ fontFamily: 'var(--font-heading)', fontSize: '1.2rem', color: 'var(--color-forest)', fontWeight: 600 }}>
@@ -68,7 +68,7 @@ export default function DataCollage({ onOpenSoilDetails }) {
         {/* 2. Market Prices Widget (Blob Collage Right) */}
         <div 
           className="blob-frame blob-collage-right animate-fade-up delay-300" 
-          style={{ flex: '1.2', minWidth: '360px', background: 'var(--color-forest)', color: '#F4EFE4', padding: '40px', display: 'flex', flexDirection: 'column', minHeight: '400px' }}
+          style={{ flex: '1.2', minWidth: 'min(360px, 100%)', background: 'var(--color-forest)', color: '#F4EFE4', padding: '40px', display: 'flex', flexDirection: 'column', minHeight: '400px' }}
         >
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2" style={{ fontFamily: 'var(--font-heading)', fontSize: '1.25rem', color: '#F4EFE4', fontWeight: 600 }}>
@@ -118,7 +118,7 @@ export default function DataCollage({ onOpenSoilDetails }) {
         {/* 3. Clay Vessel Soil Moisture Gauge Widget */}
         <div 
           className="blob-frame blob-widget animate-fade-up delay-500" 
-          style={{ flex: '1', minWidth: '300px', background: 'var(--color-surface)', display: 'flex', flexDirection: 'column', gap: '16px' }}
+          style={{ flex: '1', minWidth: 'min(300px, 100%)', background: 'var(--color-surface)', display: 'flex', flexDirection: 'column', gap: '16px' }}
         >
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2" style={{ fontFamily: 'var(--font-heading)', fontSize: '1.15rem', color: 'var(--color-forest)', fontWeight: 600 }}>
@@ -163,7 +163,7 @@ export default function DataCollage({ onOpenSoilDetails }) {
         {/* 4. Satellite Field View (NDVI-lite) */}
         <div 
           className="blob-frame blob-widget animate-fade-up delay-500" 
-          style={{ flex: '1', minWidth: '300px', background: 'var(--color-surface)', display: 'flex', flexDirection: 'column', gap: '16px' }}
+          style={{ flex: '1', minWidth: 'min(300px, 100%)', background: 'var(--color-surface)', display: 'flex', flexDirection: 'column', gap: '16px' }}
         >
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2" style={{ fontFamily: 'var(--font-heading)', fontSize: '1.15rem', color: 'var(--color-forest)', fontWeight: 600 }}>

@@ -39,7 +39,7 @@ export default function CropAdvisory({ onOpenPestModal }) {
     <div className="container flex-col gap-8 animate-fade-up">
       <div>
         <span className="eyebrow">Stage-Specific Crop Science</span>
-        <h2 style={{ fontSize: '2.8rem', color: 'var(--color-forest)' }}>Crop Advisory Engine</h2>
+        <h2 style={{ fontSize: 'clamp(1.8rem, 5vw, 2.8rem)', color: 'var(--color-forest)' }}>Crop Advisory Engine</h2>
         <div className="underline-accent" style={{ marginTop: '8px' }}></div>
         <p style={{ color: 'var(--color-sage)', fontSize: '1.05rem' }}>
           Select your crop and current field growth stage to retrieve precise irrigation timing, fertilizer dosage, and pest warnings.
@@ -47,7 +47,7 @@ export default function CropAdvisory({ onOpenPestModal }) {
       </div>
 
       {/* Crop Selector Tabs */}
-      <div className="flex gap-4" style={{ flexWrap: 'wrap' }}>
+      <div className="flex gap-4 mobile-scroll-row" style={{ flexWrap: 'wrap' }}>
         <button 
           onClick={() => setSelectedCrop('wheat')} 
           className="blob-card-soft flex items-center gap-3 cursor-pointer"

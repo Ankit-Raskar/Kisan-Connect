@@ -18,7 +18,7 @@ export default function Weather() {
       {/* Header */}
       <div>
         <span className="eyebrow">Hyper-Local Microclimate</span>
-        <h2 style={{ fontSize: '2.8rem', color: 'var(--color-forest)' }}>7-Day Field Weather Outlook</h2>
+        <h2 style={{ fontSize: 'clamp(1.8rem, 5vw, 2.8rem)', color: 'var(--color-forest)' }}>7-Day Field Weather Outlook</h2>
         <div className="underline-accent" style={{ marginTop: '8px' }}></div>
         <p style={{ color: 'var(--color-sage)', fontSize: '1.05rem' }}>
           Real-time weather telemetry tuned for agricultural field decision-making in Karnal.
@@ -46,7 +46,7 @@ export default function Weather() {
               Agricultural Alert • Friday Rain & Frost
             </span>
           </div>
-          <h3 style={{ fontSize: '2rem', color: '#FFFFFF', marginBottom: '8px' }}>
+          <h3 style={{ fontSize: 'clamp(1.4rem, 4vw, 2rem)', color: '#FFFFFF', marginBottom: '8px' }}>
             Heavy Rain Expected Friday (45mm) + Frost Risk Wednesday
           </h3>
           <p style={{ fontSize: '1rem', color: 'rgba(255,255,255,0.9)', lineHeight: 1.5 }}>
@@ -67,7 +67,7 @@ export default function Weather() {
               className="blob-card-soft" 
               style={{ 
                 flex: '1', 
-                minWidth: '220px', 
+                minWidth: 'min(220px, 100%)', 
                 background: 'var(--color-surface)', 
                 padding: '24px',
                 border: day.alert ? '2px solid var(--color-terracotta)' : '1px solid var(--color-border)',
