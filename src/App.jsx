@@ -52,7 +52,7 @@ const Layout = ({ children }) => {
   };
 
   return (
-    <div className="flex-col" style={{ minHeight: '100vh', position: 'relative' }}>
+    <div className="flex-col" style={{ minHeight: '100vh', width: '100%', position: 'relative' }}>
       
       {/* 1. Full-Bleed Mountain Hero */}
       <header className="mountain-header animate-fade-up">
@@ -74,7 +74,7 @@ const Layout = ({ children }) => {
       />
 
       {/* Page Content */}
-      <main style={{ flex: 1, paddingBottom: '100px', marginTop: '40px' }}>
+      <main style={{ flex: 1, width: '100%', paddingBottom: '100px', marginTop: '40px' }}>
         {React.cloneElement(children, { 
           onSpeak: handleAudioSpeak,
           onOpenPestModal: () => setIsPestOpen(true)

@@ -37,6 +37,14 @@ body.dusk-mode {
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
+html, body, #root {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 html { font-size: calc(16px * var(--font-scale)); scroll-behavior: smooth; }
 
 .mobile-scroll-row {
@@ -57,6 +65,7 @@ body {
   -webkit-font-smoothing: antialiased;
   line-height: 1.6;
   overflow-x: hidden;
+  width: 100%;
   transition: background-color 0.4s ease, color 0.4s ease;
 }
 
@@ -87,9 +96,9 @@ button { font-family: inherit; border: none; cursor: pointer; transition: all 0.
 }
 
 /* ─── Utilities ─── */
-.container { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
+.container { width: 100%; max-width: 1240px; margin: 0 auto; padding: 0 24px; box-sizing: border-box; }
 .flex { display: flex; }
-.flex-col { display: flex; flex-direction: column; }
+.flex-col { display: flex; flex-direction: column; width: 100%; }
 .items-center { align-items: center; }
 .justify-between { justify-content: space-between; }
 .justify-center { justify-content: center; }

@@ -95,9 +95,9 @@ export default function SeasonalTimeline() {
           overflow: 'hidden' 
         }}
       >
-        <div style={{ overflowX: 'auto', paddingBottom: '20px' }} className="hide-scrollbar">
+        <div style={{ width: '100%', maxWidth: '100%', overflowX: 'auto', paddingBottom: '20px' }} className="hide-scrollbar">
           {/* Hand-Drawn Dashed Trail SVG */}
-          <div style={{ position: 'relative', margin: '20px 0 40px 0', minWidth: '800px' }}>
+          <div style={{ position: 'relative', margin: '20px 0 40px 0', width: '700px' }}>
             
             <svg viewBox="0 0 1000 60" style={{ width: '100%', height: '60px', overflow: 'visible' }}>
               <path 
