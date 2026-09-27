@@ -95,89 +95,91 @@ export default function SeasonalTimeline() {
           overflow: 'hidden' 
         }}
       >
-        {/* Hand-Drawn Dashed Trail SVG */}
-        <div style={{ position: 'relative', margin: '20px 0 40px 0' }}>
-          
-          <svg viewBox="0 0 1000 60" style={{ width: '100%', height: '60px', overflow: 'visible' }}>
-            <path 
-              d="M 20,30 Q 180,5 340,35 T 660,25 T 980,30" 
-              fill="none" 
-              stroke="var(--color-sage)" 
-              strokeWidth="3" 
-              strokeDasharray="8 6" 
-              opacity="0.6"
-              className="path-glow-anim"
-            />
-          </svg>
+        <div style={{ overflowX: 'auto', paddingBottom: '20px' }} className="hide-scrollbar">
+          {/* Hand-Drawn Dashed Trail SVG */}
+          <div style={{ position: 'relative', margin: '20px 0 40px 0', minWidth: '800px' }}>
+            
+            <svg viewBox="0 0 1000 60" style={{ width: '100%', height: '60px', overflow: 'visible' }}>
+              <path 
+                d="M 20,30 Q 180,5 340,35 T 660,25 T 980,30" 
+                fill="none" 
+                stroke="var(--color-sage)" 
+                strokeWidth="3" 
+                strokeDasharray="8 6" 
+                opacity="0.6"
+                className="path-glow-anim"
+              />
+            </svg>
 
-          {/* Stage Node Markers along the Trail */}
-          <div 
-            className="flex justify-between items-center" 
-            style={{ 
-              position: 'absolute', 
-              top: '50%', 
-              left: 0, 
-              right: 0, 
-              transform: 'translateY(-50%)', 
-              padding: '0 10px' 
-            }}
-          >
-            {stages.map((stg) => {
-              const IconComp = stg.icon;
-              const isActive = stg.id === activeStageId;
-              const isCurrentPhase = stg.status === 'active';
+            {/* Stage Node Markers along the Trail */}
+            <div 
+              className="flex justify-between items-center" 
+              style={{ 
+                position: 'absolute', 
+                top: '50%', 
+                left: 0, 
+                right: 0, 
+                transform: 'translateY(-50%)', 
+                padding: '0 10px' 
+              }}
+            >
+              {stages.map((stg) => {
+                const IconComp = stg.icon;
+                const isActive = stg.id === activeStageId;
+                const isCurrentPhase = stg.status === 'active';
 
-              return (
-                <button
-                  key={stg.id}
-                  onClick={() => setActiveStageId(stg.id)}
-                  style={{
-                    background: isActive 
-                      ? 'var(--color-gold)' 
-                      : stg.status === 'completed' 
-                      ? 'var(--color-sage)' 
-                      : 'var(--color-bg)',
-                    color: isActive || stg.status === 'completed' ? '#2F4030' : 'var(--color-forest)',
-                    border: isCurrentPhase ? '3px solid var(--color-gold)' : '2px solid var(--color-border)',
-                    width: isActive ? '54px' : '44px',
-                    height: isActive ? '54px' : '44px',
-                    borderRadius: '50%',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    cursor: 'pointer',
-                    boxShadow: isActive ? '0 6px 20px rgba(201, 162, 75, 0.4)' : 'none',
-                    transition: 'all 0.3s ease',
-                    position: 'relative',
-                    zIndex: 2
-                  }}
-                  title={stg.title}
-                >
-                  <IconComp size={isActive ? 24 : 18} />
+                return (
+                  <button
+                    key={stg.id}
+                    onClick={() => setActiveStageId(stg.id)}
+                    style={{
+                      background: isActive 
+                        ? 'var(--color-gold)' 
+                        : stg.status === 'completed' 
+                        ? 'var(--color-sage)' 
+                        : 'var(--color-bg)',
+                      color: isActive || stg.status === 'completed' ? '#2F4030' : 'var(--color-forest)',
+                      border: isCurrentPhase ? '3px solid var(--color-gold)' : '2px solid var(--color-border)',
+                      width: isActive ? '54px' : '44px',
+                      height: isActive ? '54px' : '44px',
+                      borderRadius: '50%',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      cursor: 'pointer',
+                      boxShadow: isActive ? '0 6px 20px rgba(201, 162, 75, 0.4)' : 'none',
+                      transition: 'all 0.3s ease',
+                      position: 'relative',
+                      zIndex: 2,
+                      flexShrink: 0
+                    }}
+                    title={stg.title}
+                  >
+                    <IconComp size={isActive ? 24 : 18} />
 
-                  {isCurrentPhase && (
-                    <span 
-                      style={{ 
-                        position: 'absolute', 
-                        top: '-24px', 
-                        background: 'var(--color-gold)', 
-                        color: '#2F4030', 
-                        padding: '2px 8px', 
-                        borderRadius: '10px', 
-                        fontSize: '0.68rem', 
-                        fontWeight: 700, 
-                        whiteSpace: 'nowrap' 
-                      }}
-                      className="bounce-anim"
-                    >
-                      YOU ARE HERE
-                    </span>
-                  )}
-                </button>
-              );
-            })}
+                    {isCurrentPhase && (
+                      <span 
+                        style={{ 
+                          position: 'absolute', 
+                          top: '-24px', 
+                          background: 'var(--color-gold)', 
+                          color: '#2F4030', 
+                          padding: '2px 8px', 
+                          borderRadius: '10px', 
+                          fontSize: '0.68rem', 
+                          fontWeight: 700, 
+                          whiteSpace: 'nowrap' 
+                        }}
+                        className="bounce-anim"
+                      >
+                        YOU ARE HERE
+                      </span>
+                    )}
+                  </button>
+                );
+              })}
+            </div>
           </div>
-
         </div>
 
         {/* Selected Stage Detail Panel */}

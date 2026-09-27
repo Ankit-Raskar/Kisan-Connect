@@ -601,6 +601,16 @@ body.low-literacy .nav-link {
     margin-left: 0 !important;
     margin-top: 0 !important;
   }
+  .advisory-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+  .advisory-grid h2 {
+    font-size: 2.2rem !important;
+  }
+  .advisory-grid .blob-hero-right {
+    height: 320px !important;
+  }
   .container { padding: 0 16px; }
   .drawer-panel { width: 100%; }
   .modal-card {
@@ -657,6 +667,14 @@ body.dusk-mode .form-input {
 }
 
 /* ─── Scrollbar Styling ─── */
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb {

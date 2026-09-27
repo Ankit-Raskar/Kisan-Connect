@@ -16,7 +16,7 @@ export default function TodaysAdvisory({ onSpeak }) {
       </div>
 
       {/* Two-column grid layout */}
-      <div style={{ 
+      <div className="advisory-grid" style={{ 
         display: 'grid', 
         gridTemplateColumns: '1fr 1.4fr', 
         gap: '48px', 
