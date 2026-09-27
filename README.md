@@ -12,15 +12,34 @@
 ---
 
 ## 📋 Table of Contents
+- [📸 Application Screenshots](#-application-screenshots)
 - [✨ Key Features](#-key-features)
 - [🏗️ System Architecture & Tech Stack](#️-system-architecture--tech-stack)
 - [📁 Directory Structure](#-directory-structure)
 - [🚀 Getting Started](#-getting-started)
-- [📖 Feature Highlights](#-feature-highlights)
 - [♿ Accessibility & Inclusivity](#-accessibility--inclusivity)
 - [🌐 Deployment](#-deployment)
 - [🤝 Contributing](#-contributing)
 - [📄 License](#-license)
+
+---
+
+## 📸 Application Screenshots
+
+### 🌾 Main Dashboard & Real-Time Advisory
+![Main Dashboard](public/screenshots/dashboard.png)
+
+### 🌤️ Hyper-Local Weather Telemetry & Frost Alerts
+![Weather Telemetry](public/screenshots/weather.png)
+
+### 🧪 Soil Health Gauge & N-P-K Fertilizer Calculator
+![Soil Health Gauge](public/screenshots/soil_health.png)
+
+### 🐛 Crop Protection & Pest Diagnostics
+![Crop Advisory](public/screenshots/crop_advisory.png)
+
+### 📈 Mandi Bhav & Sell / Hold Analytics
+![Market Prices](public/screenshots/market_prices.png)
 
 ---
 
@@ -106,7 +125,13 @@ graph TD
 
 ```text
 student-help/
-├── public/                    # Static assets (favicons, icons, manifest)
+├── public/                    # Static assets & screenshots
+│   └── screenshots/           # Application preview screenshots
+│       ├── dashboard.png
+│       ├── weather.png
+│       ├── soil_health.png
+│       ├── crop_advisory.png
+│       └── market_prices.png
 ├── src/
 │   ├── assets/                # Images, illustrations, and SVG graphics
 │   ├── components/            # Reusable UI Components & Modals
