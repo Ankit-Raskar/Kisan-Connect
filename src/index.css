@@ -557,37 +557,39 @@ body.low-literacy .nav-link {
 }
 
 @media (max-width: 768px) {
+  /* Nav: hide desktop pill, show mobile bar */
+  .nav-desktop { display: none !important; }
+  .nav-mobile-bar { display: flex !important; }
+
   .top-util-inner {
     border-radius: 20px;
     padding: 10px;
   }
   .mountain-header {
-    height: 380px;
+    height: 340px;
     background-position: center 50%;
   }
   .mountain-header h2 {
-    font-size: 2rem !important;
+    font-size: 1.8rem !important;
     padding: 0 16px;
   }
   .mountain-header .eyebrow {
-    font-size: 0.7rem !important;
+    font-size: 0.68rem !important;
   }
-  .nav-pill {
-    width: 100%;
-    border-radius: 24px;
-    justify-content: flex-start;
-    padding: 10px 14px;
-    gap: 4px;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
+
+  /* Advisory hero grid → single column */
+  .advisory-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
   }
-  .nav-pill::-webkit-scrollbar { display: none; }
-  .nav-link { padding: 7px 12px; font-size: 0.78rem; }
-  .nav-divider { height: 14px; }
+  .advisory-grid h2 {
+    font-size: 2rem !important;
+  }
+
+  /* Blob frames */
   .blob-hero-right {
-    height: 280px !important;
-    border-radius: 40px 80px 30px 80px !important;
+    height: 260px !important;
+    border-radius: 30px 60px 20px 60px !important;
   }
   .blob-widget {
     position: relative !important;
@@ -595,41 +597,62 @@ body.low-literacy .nav-link {
     left: 0 !important;
     width: 100% !important;
     max-width: 100% !important;
-    margin-top: -30px;
+    min-width: 100% !important;
+    margin-top: -20px;
+    padding: 24px !important;
   }
+  .blob-collage-left,
   .blob-collage-right {
-    margin-left: 0 !important;
-    margin-top: 0 !important;
+    border-radius: 28px !important;
+    min-width: 100% !important;
   }
-  .advisory-grid {
-    grid-template-columns: 1fr !important;
-    gap: 32px !important;
+  .blob-card-soft {
+    padding: 22px;
+    border-radius: 22px;
   }
-  .advisory-grid h2 {
-    font-size: 2.2rem !important;
-  }
-  .advisory-grid .blob-hero-right {
-    height: 320px !important;
-  }
+
+  /* Container */
   .container { padding: 0 16px; }
+
+  /* Typography */
+  .text-large-num { font-size: 2.5rem; }
+  h2 { font-size: 1.8rem !important; }
+
+  /* Drawers and Modals */
   .drawer-panel { width: 100%; }
   .modal-card {
     padding: 24px;
-    border-radius: 28px;
-    margin: 16px;
+    border-radius: 24px;
+    margin: 12px;
+    max-width: calc(100vw - 24px);
+  }
+
+  /* Buttons */
+  .btn-gold, .btn-outline {
+    padding: 10px 18px;
+    font-size: 0.82rem;
+  }
+
+  /* Section spacing */
+  .flex-col.gap-8 {
+    gap: 60px !important;
   }
 }
 
 @media (max-width: 480px) {
-  .mountain-header { height: 320px; }
-  .mountain-header h2 { font-size: 1.7rem !important; }
-  .text-large-num { font-size: 2.2rem; }
-  .btn-gold, .btn-outline { padding: 8px 16px; font-size: 0.8rem; }
-  .nav-pill { padding: 8px 10px; gap: 2px; }
-  .nav-link { padding: 6px 10px; font-size: 0.72rem; }
-  .blob-card-soft { padding: 20px; }
-  .blob-widget { padding: 20px; }
-  .modal-card { padding: 20px; max-width: 100%; }
+  .mountain-header { height: 280px; }
+  .mountain-header h2 { font-size: 1.5rem !important; }
+  .text-large-num { font-size: 2rem; }
+  .btn-gold, .btn-outline { padding: 10px 14px; font-size: 0.78rem; }
+  .blob-card-soft { padding: 16px; border-radius: 18px; }
+  .blob-widget { padding: 18px !important; }
+  .modal-card { padding: 18px; max-width: 100%; }
+  .container { padding: 0 12px; }
+  h2 { font-size: 1.5rem !important; }
+  .advisory-grid h2 { font-size: 1.6rem !important; }
+  .blob-hero-right { height: 220px !important; }
+  .eyebrow { font-size: 0.7rem; letter-spacing: 0.1em; }
+  .flex-col.gap-8 { gap: 48px !important; }
 }
 
 /* ─── Form Inputs ─── */
